@@ -34,3 +34,6 @@ copy .env.example .env
 
 # 7️⃣ Run the chatbot
 python main.py
+
+## License
+This project is licensed under the Apache License 2.0.
