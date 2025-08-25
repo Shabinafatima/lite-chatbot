@@ -1,32 +1,36 @@
-# lite-chat-minimal
+# Lite Chatbot
 
-Minimal LangChain + OpenAI CLI chatbot with persistent memory.
-- Optimized code, no inline comments
-- API key via `.env` (never committed)
-- New filenames
+A simple Python-based AI chatbot built with OpenAI API and LangChain.  
+Designed for easy local setup, safe handling of API keys with `.env`, and a clean virtual environment.
 
-## Setup
-1) Python 3.9+
-2) Install deps:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3) Copy `.env.example` to `.env` and set your key:
-   ```env
-   OPENAI_API_KEY=sk-proj-your_key_here
-   ```
+## Quick Setup & Run (Copy-Paste)
 
-## Run
-```bash
+```powershell
+# 1️⃣ Clone the repository
+git clone https://github.com/Shabinafatima/lite-chatbot.git
+cd lite-chatbot
+
+# 2️⃣ Create a Python virtual environment (isolated environment for dependencies)
+python -m venv venv
+
+# 3️⃣ Activate the virtual environment
+# PowerShell:
+.\venv\Scripts\Activate.ps1
+# CMD (if using Command Prompt):
+# .\venv\Scripts\activate.bat
+# Linux/macOS:
+# source venv/bin/activate
+
+# 4️⃣ Install required Python packages
+pip install -r requirements.txt
+
+# 5️⃣ Prepare environment variables
+# Copy the example file to a real .env file
+copy .env.example .env
+
+# 6️⃣ Open the .env file and add your OpenAI API key
+# Example:
+# OPENAI_API_KEY=your_actual_api_key_here
+
+# 7️⃣ Run the chatbot
 python main.py
-```
-
-## Publish to GitHub
-```bash
-git init
-git add .
-git commit -m "init: minimal LC chatbot"
-git branch -M main
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
